@@ -1,0 +1,113 @@
+<form class="row g-3 mx-4" id="formProduct">
+    <h2 class="mb-4">Agregar Productos</h2>
+
+    <!-- Nombre del Producto -->
+
+    <div class="col-md-6">
+        <label for="title" class="form-label">Nombre del Producto</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-box"></i></span>
+            <input class="form-control" type="text" name="title" id="title" placeholder="Nombre del producto" required>
+        </div>
+    </div>
+
+    <!-- Descripción -->
+
+    <div class="col-md-6">
+        <label for="description" class="form-label">Descripción</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-file-text"></i></span>
+            <input class="form-control" type="text" name="description" id="description" placeholder="Descripción" required>
+        </div>
+    </div>
+
+    <!-- Stock -->
+
+    <div class="col-md-6">
+        <label for="stock" class="form-label">Stock</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-box"></i></span>
+            <input class="form-control" type="number" name="stock" id="stock" placeholder="Stock" required>
+        </div>
+    </div>
+
+    <!-- Imagen -->
+
+    <div class="col-md-6">
+        <label for="thumbnail" class="form-label">Imagen</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-image"></i></span>
+            <input class="form-control" type="text" name="thumbnail" id="thumbnail" placeholder="Imagen" required>
+        </div>
+    </div>
+
+    <!-- Categoría -->
+
+    <div class="col-md-6">
+        <label for="category" class="form-label">Categoría</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-grid"></i></span>
+            <input class="form-control" type="text" name="category" id="category" placeholder="Categoria" required>
+        </div>
+    </div>
+
+    <!-- Precio -->
+
+    <div class="col-md-6">
+        <label for="price" class="form-label">Precio</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-currency-dollar"></i></span>
+            <input class="form-control" type="number" name="price" id="price" placeholder="Precio" required>
+        </div>
+    </div>
+
+    <!-- Estado -->
+
+    <div class="col-md-6">
+        <div class="form-check mt-4">
+            <input name="status" class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">Estado</label>
+        </div>
+    </div>
+
+    <!-- Código -->
+
+    <div class="col-md-6">
+        <label for="code" class="form-label">Código</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-tag"></i></span>
+            <input class="form-control" type="text" name="code" id="code" placeholder="Codigo" required>
+        </div>
+    </div>
+
+
+
+    <div class="col-12 mt-4">
+        <button class="btn btn-primary" type="submit" id="add-btn">Registrar </button>
+    </div>
+
+    <h2 class="mt-4">Eliminar Producto:</h2>
+
+    <!-- Eliminar producto por id -->
+
+    <div class="col-md-6">
+        <label for="id-prod" class="form-label">ID del Producto</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-trash"></i></span>
+            <input class="form-control" type="number" name="id-prod" id="id-prod" placeholder="ID del producto">
+        </div>
+    </div>
+
+
+    <div class="col-12 mt-4">
+        <button class="btn btn-danger" type="button" id="delete-btn">Eliminar</button>
+    </div>
+</form>
+
+<div class="row mt-4" id="list-products">
+
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>
